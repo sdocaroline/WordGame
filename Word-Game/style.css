@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    padding: 0.8px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.gamename {
+    font-size: 60px;
+    font-family: 'Jersey 15', 'Open Sans', sans-serif;
+}
+
+.scoreboard {
+    max-width: 295px;
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
+}
+
+.scoreboard-letter {
+    height: 45px;
+    width: 45px;
+    font-size: 30px;
+    text-transform: uppercase;
+    border: 3px solid #ccc;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.correct {
+    background-color: darkgreen;
+    color: white;
+}
+
+.close {
+    background-color: darkorange;
+    color: white;
+}
+
+.wrong {
+    background-color: darkred;
+    color: white;
+}
+
+@keyframes flash {
+    5% {
+        border-color: darkred;
+    }
+
+    100% {
+        border-color: #DC4F4A;
+    }
+}
+
+.invalid {
+    animation: flash 1s;
+}
+
+@keyframes rainbow {
+    100%,
+    0% {
+      color: rgb(255, 0, 0);
+    }
+    8% {
+      color: rgb(255, 127, 0);
+    }
+    16% {
+      color: rgb(255, 255, 0);
+    }
+    25% {
+      color: rgb(127, 255, 0);
+    }
+    33% {
+      color: rgb(0, 255, 0);
+    }
+    41% {
+      color: rgb(0, 255, 127);
+    }
+    50% {
+      color: rgb(0, 255, 255);
+    }
+    58% {
+      color: rgb(0, 127, 255);
+    }
+    66% {
+      color: rgb(0, 0, 255);
+    }
+    75% {
+      color: rgb(127, 0, 255);
+    }
+    83% {
+      color: rgb(255, 0, 255);
+    }
+    91% {
+      color: rgb(255, 0, 127);
+    }
+  }
+  
+  .winner {
+    animation: rainbow 4s infinite linear;
+  }
